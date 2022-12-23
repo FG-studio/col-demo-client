@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+    <script>
+      const apiEndpoint = "__API_ENDPOINT__";
+      const wsUrl = '__WS_URI__'
+      const env = '__ENV__'
+      window.API_ENDPOINT = apiEndpoint.startsWith('http') ? apiEndpoint : 'http://127.0.0.1:8080'
+      window.WS_ENDPOINT = wsUrl.startsWith('ws') ? wsUrl : 'ws://127.0.0.1:8080/ws'
+      window.ENV = env.startsWith('__') ? 'debug' : env
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

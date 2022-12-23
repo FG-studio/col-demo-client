@@ -1,0 +1,43 @@
+#game-board.team-1 {
+    transform: rotate(-30deg) scale(2);
+}
+
+#game-board.team-2 {
+    transform: scaleY(-1) rotate(150deg) scale(2);
+}
+
+#game-board .hexagon-group {
+  fill: #d1d1d1;
+  fill-opacity: 0.6;
+}
+
+#game-board .hexagon-group.active {
+  fill: #52bd3e
+}
+
+#game-board g:hover {
+  fill-opacity: 1;
+}
+#game-board g:hover text {
+  fill-opacity: 1;
+}
+
+#game-board g polygon {
+  stroke: #3F51B5;
+  stroke-width: 0.2;
+  transition: fill-opacity .2s;
+}
+#game-board g text {
+  font-size: 0.3em;
+  fill: #FFFFFF;
+  fill-opacity: 0.4;
+  transition: fill-opacity .2s;
+}
+#game-board path {
+  fill: none;
+  stroke: hsl(60, 20%, 70%);
+  stroke-width: 0.4em;
+  stroke-opacity: 0.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
